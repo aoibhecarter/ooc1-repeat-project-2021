@@ -1,0 +1,23 @@
+//abstract class:is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+
+abstract class Glitter{ //abstract method (it doesn't have a body)
+   public abstract void glitterShade(); // regular method starts here
+}
+public class Sparkle extends Glitter{
+
+   public void glitterShade(){
+	System.out.println("Shiny");
+   }
+  
+	class Shimmer extends Glitter {  // Subclass (inherit from Glitter)
+		
+	public void glitterShade() { // The body of the body of glitterShade is here
+    System.out.println("The shimmer is a type of eyeshadow");
+  }
+}
+   public static void main(String args[]){
+	Glitter obj = new Sparkle();
+	obj.glitterShade();
+   }
+}
