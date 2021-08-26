@@ -1,0 +1,20 @@
+// in this code, I used a single inheritance.
+
+
+class MakeupArtist {
+   String designation = "MakeupArtist";
+   String equipment = "BeautyBlender";
+   void does(){
+	System.out.println("Artistry");
+   }
+}
+public class Foundation extends MakeupArtist{ // extends is used to inherit the properties of the base class to the derived class
+   String mainFace = "Highlighter";
+   public static void main(String args[]){
+      Foundation obj = new Foundation();
+      System.out.println(obj.equipment);
+      System.out.println(obj.designation);
+      System.out.println(obj.mainFace);
+      obj.does();
+   }
+}
