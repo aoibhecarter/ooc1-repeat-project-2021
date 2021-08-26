@@ -1,0 +1,37 @@
+/* this code is a demonstration of method overloading in Java.
+Method overloading is when there are multiple methods of the same name in
+the same class. All the methods work in different ways.
+Method overloading happens when there is more than one method
+of the same name in the class.
+*/
+
+class Makeup {    
+   public void apply(){
+      System.out.println("Blush is a form of makeup");
+   }
+}
+
+class Blush extends Makeup {
+
+   public void apply() {
+      System.out.println("You put blush on your cheeks");
+      
+     System.out.println("The price of makeup starts from 5.55");
+     double price;
+     price = 5.55;
+     System.out.println(price);
+     
+   }
+}
+
+public class TestBlush {
+
+   public static void main(String args[]) {
+      Makeup a = new Makeup(); // Makeup reference and object
+      Makeup b = new Blush(); // Makeup reference but Blush object
+
+      a.apply();//output: Blush is a form of makeup
+
+      b.apply();// You put blush on your cheeks
+   }
+}
