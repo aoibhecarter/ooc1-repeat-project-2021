@@ -1,0 +1,49 @@
+// this code tells you the name (String) of the eyeliner, the amount(count), and the barcode in the form of (int)
+
+
+class EyelinerDemo{
+    private int barcode;
+    private String empName;
+    private int empCount;
+	
+	// the above data fields are private and can't be accessed directly
+
+   
+    public int getEmpBarcode(){  //Getter and Setter methods
+        return barcode;
+    }
+
+    public String getEmpName(){
+        return empName;
+    }
+
+    public int getEmpCount(){
+        return empCount;
+    }
+
+    public void setEmpCount(int newValue){
+        empCount = newValue;
+    }
+
+    public void setEmpName(String newValue){
+        empName = newValue;
+    }
+
+    public void setEmpBARCODE(int newValue){
+        barcode = newValue;
+    }
+}
+
+// empName, barcode, and empCount are hidden data fields to show encapsulation
+
+public class LinerTest{
+    public static void main(String args[]){
+         EyelinerDemo obj = new EyelinerDemo();
+         obj.setEmpName("Zoeva");
+         obj.setEmpCount(32);
+         obj.setEmpBARCODE(112453233);
+         System.out.println("Eyeliner Name: " + obj.getEmpName());
+         System.out.println("Eyeliner Barcode: " + obj.getEmpBarcode());
+         System.out.println("Eyeliner Count: " + obj.getEmpCount());
+    } 
+}
